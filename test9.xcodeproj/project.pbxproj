@@ -13,6 +13,7 @@
 		C5D4BEB11D8D6D83001612B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5D4BEAF1D8D6D83001612B1 /* Main.storyboard */; };
 		C5D4BEB31D8D6D83001612B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5D4BEB21D8D6D83001612B1 /* Assets.xcassets */; };
 		C5D4BEB61D8D6D83001612B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5D4BEB41D8D6D83001612B1 /* LaunchScreen.storyboard */; };
+		C5D4BEC01D8D868C001612B1 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D4BEBF1D8D868C001612B1 /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		C5D4BEB21D8D6D83001612B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5D4BEB51D8D6D83001612B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5D4BEB71D8D6D83001612B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5D4BEBE1D8D868C001612B1 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		C5D4BEBF1D8D868C001612B1 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				C5D4BEA91D8D6D83001612B1 /* AppDelegate.h */,
+				C5D4BEBE1D8D868C001612B1 /* TableViewController.h */,
+				C5D4BEBF1D8D868C001612B1 /* TableViewController.m */,
 				C5D4BEAA1D8D6D83001612B1 /* AppDelegate.m */,
 				C5D4BEAC1D8D6D83001612B1 /* ViewController.h */,
 				C5D4BEAD1D8D6D83001612B1 /* ViewController.m */,
@@ -89,6 +94,7 @@
 				C5D4BE9F1D8D6D83001612B1 /* Sources */,
 				C5D4BEA01D8D6D83001612B1 /* Frameworks */,
 				C5D4BEA11D8D6D83001612B1 /* Resources */,
+				C5D4BEBD1D8D6E07001612B1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -144,6 +150,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C5D4BEBD1D8D6E07001612B1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C5D4BE9F1D8D6D83001612B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -152,6 +174,7 @@
 				C5D4BEAE1D8D6D83001612B1 /* ViewController.m in Sources */,
 				C5D4BEAB1D8D6D83001612B1 /* AppDelegate.m in Sources */,
 				C5D4BEA81D8D6D83001612B1 /* main.m in Sources */,
+				C5D4BEC01D8D868C001612B1 /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

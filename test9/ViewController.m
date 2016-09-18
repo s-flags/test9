@@ -24,4 +24,10 @@
   // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)hide {
+   UIView *v =[self.view viewWithTag:232];
+  v.hidden = !v.hidden;
+}
+
+
 @end
