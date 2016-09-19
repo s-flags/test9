@@ -9,7 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+@property (nonatomic, strong) NSDateFormatter *dateFormatter;
 @end
 
 @implementation ViewController
@@ -29,5 +29,14 @@
   v.hidden = !v.hidden;
 }
 
+#pragma helper
+- (NSDateFormatter *)dateFormatter {
+  if( !_dateFormatter ) {
+    _dateFormatter = [[NSDateFormatter alloc] init];
+    NSString *dateFormat = [NSDateFormatter dateFormatFromTemplate:@"h:mm a" options:0 locale:[NSLocale currentLocale]];
+    _dateFormatter.dateFormat = dateFormat;
+  }
+  return _dateFormatter;
+}
 
 @end
