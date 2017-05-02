@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController ()<UIPopoverPresentationControllerDelegate>
 @property (nonatomic, strong) NSDateFormatter *dateFormatter;
 @end
 
@@ -27,6 +27,27 @@
 - (IBAction)hide {
    UIView *v =[self.view viewWithTag:232];
   v.hidden = !v.hidden;
+}
+
+- (IBAction)pop:(UIBarButtonItem *)sender {
+  UIViewController *vc = [[UIViewController alloc] init];
+
+  vc.view.backgroundColor = [UIColor greenColor];
+  vc.modalPresentationStyle = UIModalPresentationPopover;
+  UIPopoverPresentationController *pop = vc.popoverPresentationController;
+  pop.barButtonItem = self.navigationItem.leftBarButtonItem;
+  vc.preferredContentSize = CGSizeMake(220, 40);
+  pop.delegate = self;
+  [self presentViewController:vc animated:YES completion:nil];
+}
+
+- (UIViewController *)presentationController:(UIPresentationController *)controller viewControllerForAdaptivePresentationStyle:(UIModalPresentationStyle)style {
+  UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:controller.presentedViewController];
+  return nav;
+}
+
+- (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller {
+  return UIModalPresentationNone;
 }
 
 #pragma helper
