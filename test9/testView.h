@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface testView : UIView
+@property (nonatomic) NSNumber *testNumber;
 @property (nonatomic) NSString *testPropName;
 @end

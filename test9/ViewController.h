@@ -10,8 +10,12 @@
 
 @interface ViewController : UIViewController
 
+
 @property (nonatomic) UIImage *img;
 @property (nonatomic) UIImage *img1;
 @property (nonatomic) UIImage *img2;
+@property (nonatomic) NSString *test;
+@property (nonatomic) NSString *test2;
+
 @end
 

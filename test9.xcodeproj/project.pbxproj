@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C50553501D9C01EC0070D7D2 /* MMTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C505534F1D9C01EC0070D7D2 /* MMTableViewController.m */; };
 		C526A3F01D907088005C8557 /* testView.m in Sources */ = {isa = PBXBuildFile; fileRef = C526A3EF1D907088005C8557 /* testView.m */; };
 		C5D4BEA81D8D6D83001612B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D4BEA71D8D6D83001612B1 /* main.m */; };
 		C5D4BEAB1D8D6D83001612B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D4BEAA1D8D6D83001612B1 /* AppDelegate.m */; };
@@ -21,6 +22,8 @@
 /* Begin PBXFileReference section */
 		1695EE41DFF80F0889E1DBF6 /* Pods-test9.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test9.debug.xcconfig"; path = "Pods/Target Support Files/Pods-test9/Pods-test9.debug.xcconfig"; sourceTree = "<group>"; };
 		56B6BA24805EDFBA5D99ABCE /* libPods-test9.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-test9.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C505534E1D9C01EC0070D7D2 /* MMTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTableViewController.h; sourceTree = "<group>"; };
+		C505534F1D9C01EC0070D7D2 /* MMTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTableViewController.m; sourceTree = "<group>"; };
 		C526A3EE1D907088005C8557 /* testView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testView.h; sourceTree = "<group>"; };
 		C526A3EF1D907088005C8557 /* testView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testView.m; sourceTree = "<group>"; };
 		C5D4BEA31D8D6D83001612B1 /* test9.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test9.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +104,8 @@
 				C5D4BEB41D8D6D83001612B1 /* LaunchScreen.storyboard */,
 				C5D4BEB71D8D6D83001612B1 /* Info.plist */,
 				C5D4BEA61D8D6D83001612B1 /* Supporting Files */,
+				C505534E1D9C01EC0070D7D2 /* MMTableViewController.h */,
+				C505534F1D9C01EC0070D7D2 /* MMTableViewController.m */,
 			);
 			path = test9;
 			sourceTree = "<group>";
@@ -251,6 +256,7 @@
 				C5D4BEAE1D8D6D83001612B1 /* ViewController.m in Sources */,
 				C5D4BEAB1D8D6D83001612B1 /* AppDelegate.m in Sources */,
 				C5D4BEA81D8D6D83001612B1 /* main.m in Sources */,
+				C50553501D9C01EC0070D7D2 /* MMTableViewController.m in Sources */,
 				C526A3F01D907088005C8557 /* testView.m in Sources */,
 				C5D4BEC01D8D868C001612B1 /* TableViewController.m in Sources */,
 			);
